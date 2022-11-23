@@ -1,0 +1,84 @@
+
+{
+    "TD1": {
+        "text": "Alo, Chị chào Em. Chị là Tâm, gọi đến từ Cổng thông tin việc làm 24H. Bên Chị đang có nhu cầu tuyển dụng nhiều vị trí khác nhau, với mức lương lên đến 20 triệu đồng/ tháng. Không biết Em có đang tìm việc hay không?",
+        "audio": "https://storage.googleapis.com/recording1700/td1.wav",
+        "count": 1,
+        "isLast": true,
+        "affirm_next": "TD8",
+        "listen": "continue"
+    },
+    "TD2": {
+        "text": "Vậy Chị xin phép gọi lại cho mình sau",
+        "audio": "https://storage.googleapis.com/recording1700/td2.wav",
+        "count": 0,
+        "isLast": false,
+        "affirm_next": null,
+        "listen": "break"
+    },
+    "TD3": {
+        "text": "Văn phòng làm việc tại quận 2, quận Bình Thạnh hoặc Thủ Đức thì có tiện cho em không",
+        "audio": "https://storage.googleapis.com/recording1700/td3.wav",
+        "count": 0,
+        "isLast": false,
+        "affirm_next": "TD4",
+        "listen": "continue"
+
+    },
+    "TD4": {
+        "text": "Vậy chị giới thiệu vị trí Nhân viên tư vấn qua điện thoại (Telesales) ngành chứng khoán, làm việc fulltime tại công ty, với mức lương cơ bản 6 đến 13 triệu, nếu em làm tốt mức thu nhập có thể lên tới 20 triệu 100 triệu. Đảm bảo không đa cấp, không lừa đảo nha em. Em có muốn ứng tuyển không nhỉ",
+        "audio": "https://storage.googleapis.com/recording1700/td4.wav",
+        "count": 0,
+        "isLast": false,
+        "affirm_next": "TD5",
+        "listen": "continue"
+    },
+    "TD5": {
+        "text": "Ok, Sau cuộc gọi này, Chị sẽ chuyển thông tin của Em về phòng nhân sự, sẽ có HR công ty liên hệ lại tư vấn cụ thể công việc và hỗ trợ Em Book lịch phỏng vấn nha",
+        "audio": "https://storage.googleapis.com/recording1700/td5.wav",
+        "count": 0,
+        "isLast": false,
+        "affirm_next": null,
+        "listen": "break"
+    },
+    "TD6": {
+        "text": "Cảm ơn em đã dành thời gian lắng nghe",
+        "audio": "https://storage.googleapis.com/recording1700/td6.wav",
+        "count": 0,
+        "isLast": false,
+        "affirm_next": null,
+        "listen": "break"
+    },
+    "TD7": {
+        "text": "Chị là Tâm, gọi đến từ Cổng thông tin việc làm 24H, Bên Chị đang có nhu cầu tuyển dụng nhiều vị trí khác nhau, với mức lương lên đến 20 triệu đồng/ tháng. Không biết Em có đang tìm việc hay không",
+        "audio": "https://storage.googleapis.com/recording1700/td7.wav",
+        "count": 0,
+        "isLast": false,
+        "affirm_next": "TD8",
+        "listen": "continue"
+    },
+    "TD8": {
+        "text": "Cho Chị hỏi Em có đang làm việc ở đâu không hay đang nghỉ ở nhà",
+        "audio": "https://storage.googleapis.com/recording1700/td8.wav",
+        "count": 0,
+        "isLast": false,
+        "affirm_next": null,
+        "listen": "continue"
+    },
+    "TD9": {
+        "text": "Hiện tại bên Chị đang cần tuyển gấp nên cảm ơn em đã dành thời gian lắng nghe",
+        "audio": "https://storage.googleapis.com/recording1700/td9.wav",
+        "count": 0,
+        "isLast": false,
+        "affirm_next": null,
+        "listen": "break"
+    },
+    "TD10": {
+        "text": "Em sẽ kết nối đến chuyên viên cho mình ngay ạ",
+        "audio": "https://storage.googleapis.com/recording1700/td10.wav",
+        "count": 0,
+        "isLast": false,
+        "affirm_next": null,
+        "listen": "agent"
+    }
+}
