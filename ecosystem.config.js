@@ -13,7 +13,7 @@ module.exports = {
     env: {
       NODE_ENV: 'production',
       LOGLEVEL: 'debug',
-      HTTP_PORT: 3010,
+      HTTP_PORT: 3000,
       JAMBONZ_ACCOUNT_SID: '9ea8f076-7efa-4ee1-b7fd-4a2116e6eb12',
       JAMBONZ_API_KEY: '1e80a9e7-266a-4565-9925-ddb7cb8d689d',
       JAMBONZ_REST_API_BASE_URL: 'https://cpaas.bigmouse.tk:3005/v1',
