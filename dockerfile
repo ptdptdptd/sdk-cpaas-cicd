@@ -14,7 +14,7 @@ ADD . /cpaas-application
 WORKDIR /cpaas-application
 
 #image sẽ nghe port này
-EXPOSE 3010
+EXPOSE 3000
 
 #chạy ứng dụng khi khởi động container
 CMD ["pm2-runtime", "ecosystem.config.js"]
