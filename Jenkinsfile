@@ -1,11 +1,11 @@
 pipeline {
     agent {
-        docker { image 'node:16.13.1-alpine' }
+        docker { image 'debian:buster' }
     }
     stages {
         stage('Test') {
       steps {
-        sh 'node --version'
+        sh 'uname -a'
       }
         }
     }
