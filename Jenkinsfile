@@ -1,49 +1,11 @@
 pipeline {
-
-  environment {
-    dockerimagename = "debian:buster"
-    dockerImage = ""
-  }
-
-  agent any
-
-  stages {
-
-    stage('Checkout Source') {
+    agent { dockerfile true }
+    stages {
+        stage('Test') {
       steps {
-        git 'https://github.com/ptd-31/cpaas-application.git'
+        sh 'pm2 start ecosystem.config.js'
+        sh 'pm2 log'
       }
-    }
-
-    stage('Build image') {
-      steps{
-        script {
-          dockerImage = docker.build dockerimagename
         }
-      }
     }
-
-    stage('Pushing Image') {
-      environment {
-               registryCredential = 'dockerhublogin'
-           }
-      steps{
-        script {
-          docker.withRegistry( 'https://registry.hub.docker.com', registryCredential ) {
-            dockerImage.push("latest")
-          }
-        }
-      }
-    }
-
-    stage('Deploying App to Kubernetes') {
-      steps {
-        script {
-          kubernetesDeploy(configs: "deploymentservice.yml", kubeconfigId: "kubernetes")
-        }
-      }
-    }
-
-  }
-
-}
+} 
