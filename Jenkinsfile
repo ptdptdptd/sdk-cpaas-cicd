@@ -1,6 +1,6 @@
 pipeline {
   environment {
-    dockerimagename = 'cs31cs31/cpaas-app'
+    dockerimagename = 'ptd/cpaas-app'
     dockerImage = ''
   }
 
@@ -9,7 +9,7 @@ pipeline {
   stages {
     stage('Checkout Source') {
       steps {
-        git 'https://github.com/ptd-31/cpaas-application.git'
+        git 'https://github.com/shazforiot/nodeapp_test.git'
       }
     }
 
