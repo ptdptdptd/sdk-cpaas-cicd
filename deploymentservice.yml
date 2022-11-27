@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: nodeserver
-        image: cs31cs31/cpaas-sdk:latest
+        image: thetips4you/nodeapp:latest
         ports:
         - containerPort: 3000
         
