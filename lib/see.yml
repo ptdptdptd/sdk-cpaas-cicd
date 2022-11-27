@@ -1,0 +1,51 @@
+apiVersion: v1
+kind: Pod #Phân loại tài nguyên: VD: pod, deployment, service
+metadata: #Chứa thông tin metadata của Pod. VD: pod, label
+  name: "MYAPP"
+  namespace: default
+  labels:
+    app: "MYAPP"
+spec: #Quan trọng
+  hostAliases: #Tương tự như file hosts. Ở đây khai báo cho pod
+    - ip: "127.0.0.1"
+      hostnames:
+        - "mylocalhost"
+  
+  initContainers: #Khai báo thông tin của init Container
+    - name: init-container-init-container
+      image: busybox
+      command: ['sh', '-c', "some-command-here"]
+  containers: #Định nghĩa thông tin chi tiết cho các container của pod
+  - name: MYAPP
+    image: "busybox:latest"
+    resources:
+      limits:
+        cpu: 200m
+        memory: 500Mi
+      requests:
+        cpu: 100m
+        memory: 200Mi
+    env:
+    - name: DB_HOST
+      valueFrom:
+        configMapKeyRef:
+          name: MYAPP
+          key: DB_HOST
+    ports:
+    - containerPort:  80
+      name:  http
+    volumeMounts:
+    - name: localtime
+      mountPath: /etc/localtime
+  volumes: #Khai báo volume cho pod, Volume lấy từ config map hoặc từ PVC
+    - name: localtime
+      hostPath:
+        path: /usr/share/zoneinfo/Asia/Ho_Chi_Minh
+  restartPolicy: Always  # VD: Always, OnFailure, Never
+  affinity:
+    nodeAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+        nodeSelectorTerms:
+          - matchExpressions:
+              - key: kubernetes.io/hostname
+                operator: Exists
