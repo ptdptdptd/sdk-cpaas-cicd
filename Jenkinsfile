@@ -1,6 +1,6 @@
 pipeline {
   environment {
-    dockerimagename = 'cs31cs31/cpaas-sdk'
+    dockerimagename = 'phanthanhdat/cpaas-sdk'
     dockerImage = ''
   }
 
