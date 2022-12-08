@@ -1,8 +1,7 @@
 FROM debian:buster
 # chạy các gói cài đặt
 RUN apt update -y
-RUN apt install curl -y
-RUN apt install sudo -y
+RUN apt install curl -y && apt install sudo -y
 RUN curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
 RUN apt update -y && apt install nodejs -y
 RUN npm install pm2 -g
