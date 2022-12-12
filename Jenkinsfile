@@ -6,12 +6,12 @@ pipeline {
 
   agent any
 
-  // stages {
-  //   stage('Checkout Source') {
-  //     steps {
-  //       git 'https://github.com/ptd-31/sdk-app.git'
-  //     }
-  //   }
+  stages {
+    stage('Checkout Source') {
+      steps {
+        git 'https://github.com/ptd-31/sdk-app.git'
+      }
+    }
 
     stage('Build image') {
       steps {
@@ -28,7 +28,7 @@ pipeline {
       steps {
         script {
           docker.withRegistry('https://registry.hub.docker.com', registryCredential) {
-            dockerImage.push('latest')
+            dockerImage.push('v10')
           }
         }
       }
