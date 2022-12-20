@@ -16,7 +16,7 @@ module.exports = {
       HTTP_PORT: 3000,
       JAMBONZ_ACCOUNT_SID: '9351f46a-678c-43f5-b8a6-d4eb58d131af',
       JAMBONZ_API_KEY: '1cf2f4f4-64c4-4249-9a3e-5bb4cb597c2a',
-      JAMBONZ_REST_API_BASE_URL: 'http://34.28.19.175:3000/v1',
+      JAMBONZ_REST_API_BASE_URL: 'http://cpaas.servertesing.tk:3000/v1',
       WEBHOOK_SECRET: 'wh_secret_cJqgtMDPzDhhnjmaJH6Mtk',
       RASA_URL: 'http://68.183.225.152:5005/webhooks/rest/webhook',
       CALLER_ID: '100',

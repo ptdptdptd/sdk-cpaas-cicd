@@ -28,18 +28,18 @@ pipeline {
       steps {
         script {
           docker.withRegistry('https://registry.hub.docker.com', registryCredential) {
-            dockerImage.push('v10')
+            dockerImage.push('v11')
           }
         }
       }
     }
 
-    // stage('Deploying App to Kubernetes') {
-    //   steps {
-    //     script {
-    //       kubernetesDeploy(configs: 'deploymentservice.yml', kubeconfigId: 'kubernetes')
-    //     }
-    //   }
-    // }
+    stage('Deploying App to Kubernetes') {
+      steps {
+        script {
+          kubernetesDeploy(configs: 'deploymentservice.yml', kubeconfigId: 'kubernetes')
+        }
+      }
+    }
   }
 }
