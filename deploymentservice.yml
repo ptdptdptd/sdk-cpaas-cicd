@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: nodeserver
-          image: phanthanhdat/cpaas-sdk:v2
+          image: phanthanhdat/sdk:v1
           ports:
             - containerPort: 3000
 

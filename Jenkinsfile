@@ -1,6 +1,6 @@
 pipeline {
   environment {
-    dockerimagename = 'phanthanhdat/fusionpbx'
+    dockerimagename = 'phanthanhdat/sdk'
     dockerImage = ''
   }
 
@@ -28,7 +28,7 @@ pipeline {
       steps {
         script {
           docker.withRegistry('https://registry.hub.docker.com', registryCredential) {
-            dockerImage.push('v2')
+            dockerImage.push('v1')
           }
         }
       }
