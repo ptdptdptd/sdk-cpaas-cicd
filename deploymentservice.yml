@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: nodeserver
-          image: phanthanhdat/sdk:v5
+          image: phanthanhdat/sdk:v6
           ports:
             - containerPort: 3000
 
